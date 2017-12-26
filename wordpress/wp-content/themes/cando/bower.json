@@ -1,0 +1,15 @@
+{
+  "name": "bootpress",
+  "main": [
+    "assets/css/styles.css",
+    "assets/javascript/custom.js"
+  ],
+  "ignore": [],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0",
+    "bootstrap": "^3.3.7",
+    "slick-carousel": "^1.8.1",
+    "flickity": "^2.0.10",
+    "jquery-touchswipe": "^1.6.18"
+  }
+}

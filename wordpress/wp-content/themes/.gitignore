@@ -1,0 +1,8 @@
+/*
+!.gitignore
+
+# Add a "!/theme-dir/", where [theme-dir] is the theme's directory, for
+# every theme you want tracked by the repo
+# !/my-theme/
+!/cando/
+!/genesis/

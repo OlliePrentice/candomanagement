@@ -1,0 +1,58 @@
+.icon-centre {
+
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  svg {
+    display: block;
+    font-size: 6rem;
+    color: $brandblue;
+    @include animation(spin 5s infinite linear);
+
+  }
+  .inner-spinner {
+    @include animation(spin-reverse 4s infinite linear);
+    color: $brandgreen;
+  }
+  .inner-spinner-2 {
+    @include animation(spin 3s infinite linear);
+  }
+  .inner-spinner-3 {
+    @include animation(spin-reverse 2s infinite linear);
+    color: $brandgreen;
+  }
+  @include keyframes(spin) {
+    0% { }
+    100% { @include transform(rotate(360deg)); }
+
+  }
+  @include keyframes(spin-reverse) {
+    0% { }
+    100% {  @include transform(rotate(-360deg)); }
+
+  }
+
+}
+
+
+.icon-empire {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 96px;
+  height: 96px;
+  margin: auto;
+  text-align: center;
+  svg {
+    font-size: 10rem;
+    color: lighten($darkergrey, 10%);
+  }
+}

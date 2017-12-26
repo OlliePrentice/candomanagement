@@ -1,0 +1,6 @@
+/*
+!.gitignore
+
+# Add a "!/plugin-dir/", where [plugin-dir] is the plugin's directory, for
+# every plugin you want tracked by the repo
+# !/my-plugin/

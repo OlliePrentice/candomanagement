@@ -1,0 +1,258 @@
+
+/* Breakpoints
+============== */
+
+
+@mixin breakpointextrasmall {
+  @media only screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin breakpointsmall {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin breakpointmedium {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin breakpointlarge {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+
+/* Absolute Centre
+================== */
+
+@mixin absolutecentre($width, $height) {
+
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: $width;
+  height: $height;
+  margin: auto;
+
+}
+
+
+/* Clearfix
+=========== */
+
+@mixin clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Buttons
+========== */
+
+@mixin brandbutton {
+
+  height: 50px;
+  padding: 0 35px;
+  margin: 25px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: $bodycopy;
+  font-weight: bold;
+  border: 1px solid $brandblue;
+  background: transparent;
+  color: $brandblue;
+  transition: 150ms;
+  &:hover, &:focus, &:active {
+
+    background: $brandblue;
+    color: $white;
+
+  }
+
+}
+
+/* Inputs
+========= */
+
+@mixin brandinput {
+
+  padding: 2px 5px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  font-size: $bodylarge;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+
+}
+
+
+/* Text Styles
+============== */
+
+@mixin brandheadingh1 {
+  padding: $extrasmallheadingonepadding;
+  font-size: $smallheadingone;
+  line-height: $extrasmallheadingonelineheight;
+  color: $brandblue;
+  @include breakpointextrasmall {
+    padding: $smallheadingonepadding;
+    line-height: $smallheadingonelineheight;
+  }
+  @include breakpointsmall {
+    padding: $headingonepadding;
+    font-size: $headingone;
+    font-weight: normal;
+    font-family: $brandfontfamily;
+    line-height: $headingonelineheight;
+
+  }
+}
+
+@mixin brandheadingh2 {
+  padding: $extrasmallheadingtwopadding;
+  font-size: $smallheadingtwo;
+  line-height: $extrasmallheadingtwolineheight;
+  font-weight: normal;
+  color: $brandmidgrey;
+  @include breakpointextrasmall {
+    padding: $smallheadingtwopadding;
+    line-height: $smallheadingtwolineheight;
+  }
+  @include breakpointsmall {
+    padding: $headingtwopadding;
+    font-size: $headingtwo;
+    font-family: $brandfontfamily;
+
+  }
+}
+
+@mixin brandheadingh3 {
+  padding: $extrasmallheadingthreepadding;
+  font-size: $smallheadingthree;
+  line-height: $extrasmallheadingthreelineheight;
+  font-weight: normal;
+  color: $brandblue;
+  @include breakpointextrasmall {
+    padding: $smallheadingthreepadding;
+    line-height: $smallheadingthreelineheight;
+  }
+  @include breakpointsmall {
+    padding: $headingthreepadding;
+    font-size: $headingthree;
+    font-family: $brandfontfamily;
+
+  }
+}
+
+@mixin brandheadingh4 {
+  padding: $extrasmallheadingfourpadding;
+  font-size: $headingfour;
+  line-height: $extrasmallheadingfourlineheight;
+  font-weight: normal;
+  @include breakpointextrasmall {
+    padding: $smallheadingfourpadding;
+    line-height: $smallheadingfourlineheight;
+  }
+  @include breakpointsmall {
+    padding: $headingfourpadding;
+    font-family: $brandfontfamily;
+    color: $brandblue;
+  }
+}
+
+/* Brand 1px Chevron
+==================== */
+
+@mixin brandarrow {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-left: 1px solid $white;
+  border-top: 1px solid $white;
+}
+
+
+/* Gradients
+============ */
+
+@mixin darkgreentogreen {
+  background: $brandgreen; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $branddarkgreen, $brandlightgreen); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $branddarkgreen, $brandlightgreen); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $branddarkgreen, $brandlightgreen); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right,$branddarkgreen, $brandlightgreen); /* Standard syntax */
+}
+
+@mixin darkgreentoaqua {
+  background: $brandaqua; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $branddarkgreen, $brandaqua); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $branddarkgreen, $brandaqua); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $branddarkgreen, $brandaqua); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right,$branddarkgreen, $brandaqua); /* Standard syntax */
+}
+
+@mixin purpletoblue {
+  background: $brandblue; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $brandpurple, $brandblue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $brandpurple, $brandblue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $brandpurple, $brandblue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right,$brandpurple, $brandblue); /* Standard syntax */
+}
+
+@mixin darkbluetolightblue {
+  background: $brandblue; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $branddarkblue, $brandlightblue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $branddarkblue, $brandlightblue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $branddarkblue, $brandlightblue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right,$branddarkblue, $brandlightblue); /* Standard syntax */
+}
+
+
+/* Animation
+============ */
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+/* Transition
+============= */
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}

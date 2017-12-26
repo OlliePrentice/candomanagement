@@ -1,0 +1,229 @@
+.gp-stats {
+
+  .gp-signup-box {
+
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border:1px solid $brandlightgrey;
+    overflow: hidden;
+    background: url(../../images/jpg/gp-stats-signup.jpg) center top no-repeat;
+    background-size: contain;
+
+    .gp-logos {
+
+      height:70px;
+      @include background-image(linear-gradient(to bottom, $branddarkgrey, transparent));
+
+      img {
+
+        position: absolute;
+
+      } // END OF GP-LOGOS/IMG
+
+      .gp-logos-cqc {
+
+        width: 80px;
+        top: 5px;
+        left: 10px;
+
+      } // END OF GP-LOGOS-CQC
+
+      .gp-logos-nhs {
+
+        width: 130px;
+        top: 0px;
+        right: 0;
+
+      } // END OF GP-LOGOS-NHS
+
+    } // END OF GP-LOGOS
+
+  } // END OF GP-SIGNUP-BOX
+
+  .gp-box-overlay {
+
+    position: absolute;
+    top: 170px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba($white,.7);
+
+    .gp-box-copy {
+
+      position: absolute;
+      text-align: center;
+      bottom: 180px;
+      left: 60px;
+      font-weight: 600;
+
+      p {
+
+        color: $brandblue;
+        padding: 0;
+        margin: 0;
+
+      }// END OF GP-BOX-COPY/P
+
+      a {
+
+        color: $brandgreen;
+        text-decoration: none;
+
+        &:hover {
+
+          color: $branddarkgreen;
+
+        }// END OF GP-BOX-COPY/HOVER
+
+      }// END OF GP-BOX-COPY/A
+
+    }// END OF GP-BOX-COPY
+
+  }// END OF GP-BOX-OVERLAY
+
+
+  .gp-stats-box {
+
+    height:auto;
+    width: auto;
+    background: $brandoffwhite;
+    margin:30px 0;
+    border: 1px solid $brandlightgrey;
+
+    .gp-pie-1, .gp-pie-2 {
+
+      margin: 30px 0;
+
+      span {
+
+        padding:0 10px;
+
+      }// END OF GP-PIE-1/GP-PIE-2/SPAN
+
+    }// END OF GP-PIE-1/GP-PIE-2
+
+  }// END OF GP-STATS-BOX
+
+
+}// END OF GP-STATS
+
+@include breakpointsmall {
+
+  .gp-stats {
+
+    .gp-signup-box {
+
+      width: 300px;
+      height: 300px;
+
+      .gp-logos {
+
+        .gp-logos-nhs {
+
+          width:150px;
+
+        } // END OF GP-LOGO-NHS
+
+        .gp-logos-cqc {
+
+          width:100px;
+
+        } // END OF GP-LOGO-CQC
+
+      } // END OF GP-LOGO
+
+      .gp-box-overlay {
+
+        top: 200px;
+
+        .gp-box-copy {
+
+          bottom: 210px;
+          left: 75px;
+
+        } // END OF GP-BOX-COPY
+
+      }// END OF GP-BOX-OVERLAY
+
+    }// END OF GP-SIGNUP-BOX
+
+    .gp-stats-box {
+
+      .gp-pie-1, .gp-pie-2 {
+
+        display: inline-block;
+        width:45%;
+
+      } // END OF GP-PIE-1/GP-PIE-2
+
+    }// END OF GP-STATS-BOX
+
+  }// END OF GP-STATS
+
+}// END OF BREAK-POINT-SMALL
+
+
+
+//START OF PIE CHART ANIMATION CLASSES
+
+html,
+
+body {
+
+  font-family: sans-serif;
+  text-align: center;
+
+} // END OF BODY
+
+@keyframes fillup {
+
+  from { stroke-dasharray: 0 100; }
+
+} // END OF KEYFRAME FILLUP
+
+.gp-pie {
+
+  width: 100px;
+  height: 100px;
+  transform: rotate(-90deg);
+  background: #fff;
+  border-radius: 50%;
+
+}// END OF GP-PIE
+
+circle {
+
+  fill: #eee;
+  stroke: $brandblue;
+  stroke-width: 10;
+  stroke-dasharray: 0 100; /* for 75% */
+  animation: fillup 2s ease-out forwards;
+
+}// END OF CIRCLE
+
+.pie {
+
+  position: relative;
+
+}// END OF PIE
+.pie2 {
+
+  position: relative;
+
+}// END OF PIE2
+
+.gp-stats-circle {
+
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+
+}// END OF GP-STATS-CIRCLE
+
+
+
+

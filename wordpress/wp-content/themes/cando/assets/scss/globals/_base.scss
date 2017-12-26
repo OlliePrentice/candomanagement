@@ -1,0 +1,125 @@
+
+/* Core Page
+============ */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $brandfontfamily;
+  font-size: 1em;
+  line-height: $extrasmallbodylineheight;
+  background: $white;
+  color: $branddarkgrey;
+}
+
+
+a {
+  font-size: $bodycopy;
+  color: $brandblue;
+  text-decoration: none;
+  &:hover, &:focus {
+    color: $branddarkblue;
+  }
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: $white;
+  background: $selectiondarkblue;
+}
+
+::selection {
+  color: $white;
+  background: $selectiondarkblue;
+}
+
+
+
+/* Body Content
+=============== */
+
+.entry-content, .panel-content {
+  padding: $extrasmallentrypadding;
+
+}
+
+h1 {
+  @include brandheadingh1;
+}
+
+h2 {
+  @include brandheadingh2;
+}
+
+h3 {
+  @include brandheadingh3;
+}
+
+h4 {
+  @include brandheadingh3;
+}
+
+p {
+  padding: $extrasmallbodypadding;
+  font-size: $bodycopy;
+}
+
+ul {
+  font-size: $bodycopy;
+}
+
+
+li {
+  font-size: $bodycopy;
+}
+
+span {
+  font-size: $bodycopy;
+}
+
+
+/* Custom Classes
+================= */
+
+.sub-title {
+  @include brandheadingh2;
+}
+
+
+/* Media Queries
+================ */
+
+@include breakpointextrasmall {
+
+  body {
+    line-height: $smallbodylineheight;
+  }
+
+  .entry-content, .panel-content {
+    padding: $smallentrypadding;
+  }
+
+  p {
+    padding: $smallbodypadding;
+  }
+
+}
+
+
+@include breakpointsmall {
+
+  body {
+    line-height: $bodylineheight;
+  }
+
+  .entry-content, .panel-content {
+    padding: $entrypaddding;
+  }
+
+  p {
+    padding: $bodypadding;
+  }
+
+}
+
