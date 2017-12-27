@@ -16,6 +16,8 @@ add_action('gft_setup', 'prentice_register_field_to_post_type');
 function prentice_register_field_to_post_type() {
 
     if(gft_admin_edit_get_post_type() === 'page'){
-        prentice_register_affiliates_carbon();
+        prentice_register_header_tab_carbon();
+        prentice_register_content_tab_carbon();
+        prentice_register_link_block_carbon();
     }
 }

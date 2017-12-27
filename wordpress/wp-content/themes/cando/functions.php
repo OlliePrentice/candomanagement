@@ -32,13 +32,13 @@ flush_rewrite_rules( false );
 /* ACTIONS
 ========== */
 
-add_action('upload_mimes', 'add_file_types_to_uploads');
-
+add_action('upload_mimes', 'prentice_add_file_types_to_uploads');
+add_action( 'genesis_after_header', 'prentice_single_page_header', 8 );
 
 /* FILTERS
 ========== */
 
-add_filter( 'genesis_pre_load_favicon', 'genesischild_favicon' );
+add_filter( 'genesis_pre_load_favicon', 'prentice_genesis_favicon' );
 
 
 
@@ -46,8 +46,11 @@ add_filter( 'genesis_pre_load_favicon', 'genesischild_favicon' );
 ============ */
 
 
+
+
+
 //add SVG to allowed file uploads
-function add_file_types_to_uploads($file_types){
+function prentice_add_file_types_to_uploads($file_types){
 
     $new_filetypes = array();
     $new_filetypes['svg'] = 'image/svg+xml';
@@ -57,7 +60,7 @@ function add_file_types_to_uploads($file_types){
 }
 
 /** Adding custom Favicon */
-function genesischild_favicon( $favicon_url ) {
+function prentice_genesis_favicon( $favicon_url ) {
     return gft_get_asset('/icon/favicon.ico', 'img');
 }
 

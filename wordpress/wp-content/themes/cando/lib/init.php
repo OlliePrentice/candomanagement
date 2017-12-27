@@ -54,7 +54,9 @@ add_action( 'gft_init', '_prentice_load_hooks' );
  */
 function _prentice_load_hooks() {
 
-    require_once( PRENTICE_HOOKS_DIR . '/admin/affiliates-carbon.php' );
+    require_once( PRENTICE_HOOKS_DIR . '/admin/page-header-carbon.php' );
+    require_once( PRENTICE_HOOKS_DIR . '/admin/page-block-carbon.php' );
+    require_once( PRENTICE_HOOKS_DIR . '/admin/link-block-carbon.php' );
 	require_once( PRENTICE_HOOKS_DIR . '/admin/admin-carbon.php' );
 	require_once( PRENTICE_HOOKS_DIR . '/admin/post-types.php' );
 	require_once( PRENTICE_HOOKS_DIR . '/assets.php' );

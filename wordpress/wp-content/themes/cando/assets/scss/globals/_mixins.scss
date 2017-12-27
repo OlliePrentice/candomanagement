@@ -99,10 +99,10 @@
 
 @mixin brandheadingh1 {
   padding: $extrasmallheadingonepadding;
-  font-size: $smallheadingone;
+  font-size: $extrasmallheadingone;
   font-family: $headingfontfamily;
   line-height: $extrasmallheadingonelineheight;
-  color: $logodarkblue;
+  color: $white;
   @include breakpointextrasmall {
     padding: $smallheadingonepadding;
     line-height: $smallheadingonelineheight;
@@ -118,7 +118,7 @@
 
 @mixin brandheadingh2 {
   padding: $extrasmallheadingtwopadding;
-  font-size: $smallheadingtwo;
+  font-size: $extrasmallheadingtwo;
   font-family: $headingfontfamily;
   line-height: $extrasmallheadingtwolineheight;
   font-weight: normal;
@@ -137,7 +137,7 @@
 
 @mixin brandheadingh3 {
   padding: $extrasmallheadingthreepadding;
-  font-size: $smallheadingthree;
+  font-size: $extrasmallheadingthree;
   font-family: $headingfontfamily;
   line-height: $extrasmallheadingthreelineheight;
   font-weight: normal;
@@ -145,6 +145,7 @@
   @include breakpointextrasmall {
     padding: $smallheadingthreepadding;
     line-height: $smallheadingthreelineheight;
+    font-size: $smallheadingthree;
   }
   @include breakpointsmall {
     padding: $headingthreepadding;

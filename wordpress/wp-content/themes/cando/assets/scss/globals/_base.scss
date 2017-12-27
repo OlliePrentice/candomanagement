@@ -61,10 +61,6 @@ a {
 /* Body Content
 =============== */
 
-.entry-content, .panel-content {
-  padding: $extrasmallentrypadding;
-
-}
 
 h1 {
   @include brandheadingh1;
@@ -107,9 +103,21 @@ button {
   @include brandbutton;
 }
 
+.btn-default {
+  svg {
+    margin-left: 20px;
+    font-size: 1.6rem;
+  }
+}
+
+
 
 /* Custom Classes
 ================= */
+
+.page-header {
+  padding: 40px 0;
+}
 
 .sub-title {
   @include brandheadingh2;
@@ -125,9 +133,6 @@ button {
     line-height: $smallbodylineheight;
   }
 
-  .entry-content, .panel-content {
-    padding: $smallentrypadding;
-  }
 
   p {
     padding: $smallbodypadding;
@@ -140,10 +145,6 @@ button {
 
   body {
     line-height: $bodylineheight;
-  }
-
-  .entry-content, .panel-content {
-    padding: $entrypaddding;
   }
 
   p {

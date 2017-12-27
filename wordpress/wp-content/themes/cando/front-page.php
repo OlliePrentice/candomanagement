@@ -12,29 +12,26 @@ remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 
 
 // Get Text Demo
-add_action('genesis_entry_content', 'prentice_get_text_demo');
+//add_action('genesis_entry_content', 'prentice_get_text_demo');
+//
+//function prentice_get_text_demo() {
+//
+//    gft_get_template_content_part('content', 'text-demo');
+//
+//
+//}
 
-function prentice_get_text_demo() {
 
-    gft_get_template_content_part('content', 'text-demo');
+
+// Get Contact Block
+add_action('genesis_entry_content', 'prentice_get_link_block');
+
+function prentice_get_link_block() {
+
+    gft_get_template_component_part('component', 'link-block');
 
 
 }
-
-
-
-// Get Text Demo
-add_action('genesis_entry_content', 'prentice_get_text_demo');
-
-function prentice_get_text_demo() {
-
-    gft_get_template_content_part('content', 'text-demo');
-
-
-}
-
-
-
 
 
 
