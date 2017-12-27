@@ -12,20 +12,20 @@
   svg {
     display: block;
     font-size: 6rem;
-    color: $brandblue;
+    color: $bodydarkpurple;
     @include animation(spin 5s infinite linear);
 
   }
   .inner-spinner {
     @include animation(spin-reverse 4s infinite linear);
-    color: $brandgreen;
+    color: $bodydarkpurple;
   }
   .inner-spinner-2 {
     @include animation(spin 3s infinite linear);
   }
   .inner-spinner-3 {
     @include animation(spin-reverse 2s infinite linear);
-    color: $brandgreen;
+    color: $bodydarkpurple;
   }
   @include keyframes(spin) {
     0% { }

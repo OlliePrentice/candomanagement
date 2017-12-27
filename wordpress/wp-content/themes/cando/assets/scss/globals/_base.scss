@@ -7,31 +7,53 @@ html {
 }
 
 body {
-  font-family: $brandfontfamily;
+  @include bodyfont;
   font-size: 1em;
   line-height: $extrasmallbodylineheight;
+  letter-spacing: -0.1em;
   background: $white;
-  color: $branddarkgrey;
+  color: $bodydarkpurple;
 }
 
 
 a {
   font-size: $bodycopy;
-  color: $brandblue;
+  color: $logored;
   text-decoration: none;
   &:hover, &:focus {
-    color: $branddarkblue;
+    color: $bodydarkpurple;
+    text-decoration: none;
   }
+}
+
+.navigation-link {
+  display: inline-block;
+  line-height: $linklineheight;
+  color: $bodydarkpurple;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background: transparent;
+  }
+  &:hover, &:focus {
+    color: $bodydarkpurple;
+    &:after {
+      background: $logored;
+    }
+  }
+
 }
 
 ::-moz-selection { /* Code for Firefox */
   color: $white;
-  background: $selectiondarkblue;
+  background: $bodydarkpurple;
 }
 
 ::selection {
   color: $white;
-  background: $selectiondarkblue;
+  background: $bodydarkpurple;
 }
 
 
@@ -50,14 +72,17 @@ h1 {
 
 h2 {
   @include brandheadingh2;
+  letter-spacing: 0;
 }
 
 h3 {
   @include brandheadingh3;
+  letter-spacing: 0;
 }
 
 h4 {
-  @include brandheadingh3;
+  @include brandheadingh4;
+  letter-spacing: 0;
 }
 
 p {
@@ -76,6 +101,10 @@ li {
 
 span {
   font-size: $bodycopy;
+}
+
+button {
+  @include brandbutton;
 }
 
 

@@ -20,23 +20,19 @@ $midlightgrey: #bcbcbc;
 ================ */
 
 //Logo Colours
-$brandblue: #199bd7;
-$brandgreen: #65bc55;
+$logored: #ee3258;
+$logodarkblue: #12294f;
+$logogrey: #a4a8ac;
 
-//Neutral Colour Palette
-$branddarkgrey: #666;
-$brandmidgrey: #888;
-$brandlightgrey: #a1a1a1;
-$brandlightergrey: #eee;
-$brandoffwhite: #fafafa;
 
 //Complimentary Colours
-$branddarkgreen: #199a55;
-$brandlightgreen: #78dc5f;
-$brandaqua: #14cac8;
-$brandlightblue: #65bcd6;
-$branddarkblue: #025f89;
-$brandpurple: #4c2281;
+$brandcyan: #3ec2cd;
+$brandyellow: #fec934;
+
+
+//Elements
+$bodydarkpurple: #1e1620;
+$inputgrey: #a0a9b9;
 
 
 /* Other Colours
@@ -48,9 +44,8 @@ $lightteal: #80CBC4;
 $lightcyan: #80DEEA;
 $lighterbggrey: #ECEAEB;
 
-$failred: #E53935;
-
-$selectiondarkblue: #02567E;
+$fail: $logored;
+$success: $brandcyan;
 
 
 
@@ -58,22 +53,34 @@ $selectiondarkblue: #02567E;
 ======== */
 
 //Font Family
-$brandfontfamily: 'Source Sans Pro', sans-serif;
+$headingfontfamily: 'Frank Ruhl Libre', serif;
+$bodyfontfamily: 'okomito', sans-serif;
 
 //Font Sizes
-$headingone: 3.8rem;
-$headingtwo: 2.8rem;
-$headingthree: 2.4rem;
-$headingfour: 2rem;
 
-$bodylarge: 1.8rem;
-$bodycopy: 1.6rem;
+//Headings Large
+$headingone: 9rem;
+$headingtwo: 6rem;
+$headingthree: 6rem;
+$headingfour: 2.8rem;
+$headingfive: 2rem;
+
+//Body Text
+$bodylarge: 2rem;
+$bodycopy: 1.8rem;
+$navigationcopy: 1.6rem;
+$footercopy: 1.6rem;
 $breadcrumb: 1.4rem;
 
-$smallheadingone: 3rem;
-$smallheadingtwo: 2.6rem;
-$smallheadingthree: 2.2rem;
+//Headings Small
+$smallheadingone: 4.5rem;
+$smallheadingtwo: 4.5rem;
+$smallheadingthree: 3rem;
 
+//Miscellaneous
+$datemonth: 2rem;
+$dateday: 3.4rem;
+$linklineheight: 1.4rem;
 
 
 /* Spacing
@@ -92,10 +99,10 @@ $bodylargepadding: 0 0 3.1rem;
 $bodypadding: 0 0 3rem;
 
 
-$headingonelineheight: 5.3rem;
-$headingtwolineheight: 4.2rem;
-$headingthreelineheight: 3.7rem;
-$headingfourlineheight: 3.3rem;
+$headingonelineheight: 9.6rem;
+$headingtwolineheight: 12rem;
+$headingthreelineheight: 12rem;
+$headingfourlineheight: 12rem;
 
 $bodylargelineheight: 3.1rem;
 $bodylineheight: 3rem;

@@ -61,21 +61,20 @@
 
 @mixin brandbutton {
 
-  height: 50px;
-  padding: 0 35px;
-  margin: 25px;
-  border-radius: 10px;
+  height: 58px;
+  padding: 0 30px;
+  border-radius: 28px;
   text-align: center;
   font-size: $bodycopy;
-  font-weight: bold;
-  border: 1px solid $brandblue;
-  background: transparent;
-  color: $brandblue;
+  border: 2px solid $logored;
+  background: $logored;
+  color: $white;
   transition: 150ms;
+  cursor: pointer;
   &:hover, &:focus, &:active {
 
-    background: $brandblue;
-    color: $white;
+    background: transparent;
+    color: $logored;
 
   }
 
@@ -101,8 +100,9 @@
 @mixin brandheadingh1 {
   padding: $extrasmallheadingonepadding;
   font-size: $smallheadingone;
+  font-family: $headingfontfamily;
   line-height: $extrasmallheadingonelineheight;
-  color: $brandblue;
+  color: $logodarkblue;
   @include breakpointextrasmall {
     padding: $smallheadingonepadding;
     line-height: $smallheadingonelineheight;
@@ -111,7 +111,6 @@
     padding: $headingonepadding;
     font-size: $headingone;
     font-weight: normal;
-    font-family: $brandfontfamily;
     line-height: $headingonelineheight;
 
   }
@@ -120,9 +119,10 @@
 @mixin brandheadingh2 {
   padding: $extrasmallheadingtwopadding;
   font-size: $smallheadingtwo;
+  font-family: $headingfontfamily;
   line-height: $extrasmallheadingtwolineheight;
   font-weight: normal;
-  color: $brandmidgrey;
+  color: $logodarkblue;
   @include breakpointextrasmall {
     padding: $smallheadingtwopadding;
     line-height: $smallheadingtwolineheight;
@@ -130,7 +130,7 @@
   @include breakpointsmall {
     padding: $headingtwopadding;
     font-size: $headingtwo;
-    font-family: $brandfontfamily;
+    line-height: $headingtwolineheight;
 
   }
 }
@@ -138,9 +138,10 @@
 @mixin brandheadingh3 {
   padding: $extrasmallheadingthreepadding;
   font-size: $smallheadingthree;
+  font-family: $headingfontfamily;
   line-height: $extrasmallheadingthreelineheight;
   font-weight: normal;
-  color: $brandblue;
+  color: $logodarkblue;
   @include breakpointextrasmall {
     padding: $smallheadingthreepadding;
     line-height: $smallheadingthreelineheight;
@@ -148,7 +149,7 @@
   @include breakpointsmall {
     padding: $headingthreepadding;
     font-size: $headingthree;
-    font-family: $brandfontfamily;
+    line-height: $headingthreelineheight;
 
   }
 }
@@ -156,65 +157,33 @@
 @mixin brandheadingh4 {
   padding: $extrasmallheadingfourpadding;
   font-size: $headingfour;
+  font-family: $headingfontfamily;
   line-height: $extrasmallheadingfourlineheight;
   font-weight: normal;
+  color: $logodarkblue;
   @include breakpointextrasmall {
     padding: $smallheadingfourpadding;
     line-height: $smallheadingfourlineheight;
   }
   @include breakpointsmall {
     padding: $headingfourpadding;
-    font-family: $brandfontfamily;
-    color: $brandblue;
+    line-height: $headingthreelineheight;
   }
 }
 
-/* Brand 1px Chevron
-==================== */
 
-@mixin brandarrow {
-  display: block;
-  width: 15px;
-  height: 15px;
-  border-left: 1px solid $white;
-  border-top: 1px solid $white;
+/* Fonts
+======== */
+
+@mixin bodyfont {
+  font-family: $bodyfontfamily;
+  font-weight: normal;
 }
 
 
 /* Gradients
 ============ */
 
-@mixin darkgreentogreen {
-  background: $brandgreen; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, $branddarkgreen, $brandlightgreen); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, $branddarkgreen, $brandlightgreen); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, $branddarkgreen, $brandlightgreen); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right,$branddarkgreen, $brandlightgreen); /* Standard syntax */
-}
-
-@mixin darkgreentoaqua {
-  background: $brandaqua; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, $branddarkgreen, $brandaqua); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, $branddarkgreen, $brandaqua); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, $branddarkgreen, $brandaqua); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right,$branddarkgreen, $brandaqua); /* Standard syntax */
-}
-
-@mixin purpletoblue {
-  background: $brandblue; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, $brandpurple, $brandblue); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, $brandpurple, $brandblue); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, $brandpurple, $brandblue); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right,$brandpurple, $brandblue); /* Standard syntax */
-}
-
-@mixin darkbluetolightblue {
-  background: $brandblue; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, $branddarkblue, $brandlightblue); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, $branddarkblue, $brandlightblue); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, $branddarkblue, $brandlightblue); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right,$branddarkblue, $brandlightblue); /* Standard syntax */
-}
 
 
 /* Animation

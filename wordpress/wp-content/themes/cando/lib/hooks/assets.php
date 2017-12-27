@@ -13,7 +13,7 @@ function prentice_enqueue_scripts()
     /**
      * CSS
      */
-    wp_register_style('fonts', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro', NULL, '1.0', 'screen');
+    wp_register_style('fonts', 'https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre', NULL, '1.0', 'screen');
     wp_register_style('lib', gft_get_asset('/min/lib.min.css', 'css'), NULL, '1.0', 'screen');
     wp_register_style('styles', gft_get_asset('/min/styles.min.css', 'css'), array('lib'), '1.0', 'screen');
 
